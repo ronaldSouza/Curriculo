@@ -1,5 +1,3 @@
-
-
 <?php
 
     $nome = $_POST['nome'];
@@ -25,8 +23,7 @@
     $funcao = $_POST['funcao'];
 
     date_default_timezone_set('America/Sao_Paulo');
-
-        
+    
     $novo_nome = "";
     $img_dir = "";
     $dir = "../uploads". DIRECTORY_SEPARATOR;
@@ -40,17 +37,20 @@
         move_uploaded_file($_FILES['foto']['tmp_name'], $img_dir);
     }
         
-    
     // organizar data na ordem correta
     $conc = "";
          
-    $nova_conc_data = date("d/m/Y", strtotime($data_conc));
+    $nova_conc = date("d/m/Y", strtotime($data_conc));
     $nova_emp_ent = date("d/m/Y", strtotime($emp_ent));
     $nova_emp_sai = date("d/m/Y", strtotime($emp_sai));
+    if ($nova_emp_sai == "31/12/1969") {
+        $nova_emp_sai = "Atual";
+    }
+    
     if ($opcao == "concluido") {
-        $conc = "Curso Concluído em ". $nova_conc_data;
+        $conc = "Curso Concluído em ". $nova_conc;
     } else {
-        $conc = "Conclusão Prevista do Curso: ". $nova_conc_data;
+        $conc = "Conclusão Prevista do Curso: ". $nova_conc;
     }
         
     // organizar o formato do telefone

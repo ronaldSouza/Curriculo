@@ -74,11 +74,10 @@
                         <option value="SP">São Paulo</option>
                         <option value="SE">Sergipe</option>
                         <option value="TO">Tocantins</option>
-                        <option value="EX">Estrangeiro</option>
+                        <option value="Estrangeiro">Estrangeiro</option>
                     </select>
                 </div>
                 
-
                 <!-- Objetivo -->
 
                 <h2>Objetivo</h2>
@@ -113,17 +112,20 @@
                 <textarea type="text" name="funcao" ></textarea>
                 
                 <div>
-                    <h3 class="datas">Data de entrada</h3>
-                    <h3 class="datas">Data de saída</h3>     
+                    <div>
+                        <h3 class="datas">Data de entrada</h3>
+                        <h3 class="datas">Data de saída</h3>  
+                    </div>
+                
+                    <input class="data_box" type="date" name="data_ent">
+                    <input class="data_box" type="date" name="data_sai">
+                    <span class="ajuda">?</span> 
                 </div>
                 
-                <input class="data_box" type="date" name="data_ent">
-                <input class="data_box" type="date" name="data_sai">
                 
                 <!-- Idiomas -->
                 <h2>Idiomas</h2>
-                <ul>
-                    
+                <ul>      
                     <input type="checkbox" name="pt">
                     <li style="display: inline">Português</li>
                     <input type="checkbox" name="en">
