@@ -52,9 +52,6 @@
     } else {
         $conc = "Conclusão Prevista do Curso: ". $nova_conc_data;
     }
-
-    
-    
         
     // organizar o formato do telefone
     $phone_size = strlen($phone);

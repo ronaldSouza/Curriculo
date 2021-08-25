@@ -1,6 +1,12 @@
 body {
     overflow-x: hidden;
 }
+
+#estados {
+    position: relative;
+    right: 20px;
+}
+
 textarea {
     position: relative;
     resize: vertical;
