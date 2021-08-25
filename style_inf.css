@@ -1,0 +1,63 @@
+body {
+    overflow-x: hidden;
+}
+textarea {
+    position: relative;
+    resize: vertical;
+    height: 150px; 
+    width: 300px; 
+    display: inline;
+    margin-left: 20px;
+    
+}
+h3+textarea {
+    position: relative;
+    resize: vertical;
+    height: 150px; 
+    width: 300px; 
+    display: inline;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    
+}
+
+h2 {
+    margin-left: 20px;
+    position: sticky;
+}
+
+h3{
+    margin-left: 40px;
+}
+
+.datas {
+    display: inline;
+    margin-right: 16px;
+    margin-left: 40px;
+}
+.data_box {
+    display: inline;
+    margin-left: 40px;
+    margin-top: 10px;
+    
+}
+
+
+input {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    size: 1;
+}
+
+h3+input {
+    margin-left: 40px;
+}
+
+select{
+    
+    margin-left: 40px;
+}
+
+.line {
+    display: inline-block;
+}

@@ -1,0 +1,66 @@
+body {
+    overflow-x: hidden;
+}
+#topo {
+    background-color: darkslategrey;
+    position: relative;
+    height: 100px;
+    width: 102%;
+    height: 100px;
+    right: 10px;
+    bottom: 21px;
+}
+
+#centro {
+    position: relative;
+    margin-right: 400px;
+    left: 10px;
+    height: auto;
+}
+
+
+h1 {
+    color: aquamarine;
+}
+
+#centro h1 {
+    word-wrap: break-word;
+    color:black;
+}
+
+h2 {
+    color: beige;
+}
+
+h3 {
+    margin-left: 40px;
+}
+
+.center {
+    position: inherit;
+    top: 10px;
+    left: 50px;
+}
+
+#topo>h1+h3 {
+    position: inherit;
+    color: beige;
+    bottom: 5px;
+    left: 12px;
+}
+
+li {
+    font-weight: bold;
+    font-size: larger;
+}
+
+
+img {
+    position: relative;
+    float: right;
+    bottom: 0cm;
+    right: 10px;
+    height: 10cm;
+    width: 8cm;
+    background-color: black;
+}
