@@ -1,6 +1,7 @@
+
+
 <?php
 
-        // print_r("aaaaaaaaaa");
     $nome = $_POST['nome'];
     $idade = $_POST['idade'];
     $phone = $_POST['tel'];
@@ -28,30 +29,32 @@
         
     $novo_nome = "";
     $img_dir = "";
-    $dir = "uploads". DIRECTORY_SEPARATOR;
+    $dir = "../uploads". DIRECTORY_SEPARATOR;
+    //renomear arquivo temporário
     if(isset($_FILES['foto']) and $_FILES['foto']['name'] <> "") {
 
         $ext = explode(".", strtolower($_FILES['foto']['name']))[1];
         $novo_nome = date("Y.m.d-H.i.s") . ".".$ext;
-        $dir = 'uploads/';
         $img_dir = $dir.$novo_nome;
 
         move_uploaded_file($_FILES['foto']['tmp_name'], $img_dir);
     }
         
-        
+    
+    // organizar data na ordem correta
     $conc = "";
-        
-    $nova_data = date("d/m/Y", strtotime($data_conc));
-    if ($opcao == "concluido") {
-        $conc = "Curso Concluído em ". $nova_data;
-    } else {
-        $conc = "Conclusão Prevista do Curso: ". $nova_data;
-    }
-
+         
+    $nova_conc_data = date("d/m/Y", strtotime($data_conc));
     $nova_emp_ent = date("d/m/Y", strtotime($emp_ent));
     $nova_emp_sai = date("d/m/Y", strtotime($emp_sai));
+    if ($opcao == "concluido") {
+        $conc = "Curso Concluído em ". $nova_conc_data;
+    } else {
+        $conc = "Conclusão Prevista do Curso: ". $nova_conc_data;
+    }
 
+    
+    
         
     // organizar o formato do telefone
     $phone_size = strlen($phone);
@@ -64,6 +67,7 @@
             $phone_aux = $phone_aux. $phone[$i];
     }
 
+    // organizar idiomas em um array para mostrar como lista desordenada
     $idiomas = array();
     if (isset($_POST['en'])) {
         array_push($idiomas, "Inglês");
@@ -84,6 +88,6 @@
         array_push($idiomas,"Indonésio");
     }
 
-    include 'curriculo_pag.html';
+    include_once '../html/curriculo_pag.html';
 
 ?>
