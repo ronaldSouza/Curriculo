@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!-- Arquivo principal -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/form_style.css">
+    </head>
+
+    <body>
+
+        <h1>Coloque suas informações</h1>
+
+        <form action="../php/curriculo.php" method="post" enctype="multipart/form-data">
+            <div id="centro">
+         
+                <div class="line">
+                    <h2>Nome</h2>
+                    <input type="text" name="nome">
+                </div>
+                
+                <!-- Foto -->
+                <div class="line">
+                    <h2>Foto</h2>
+                    <input type="file" name="foto">
+                </div>
+                     
+                <!-- Informações Pessoais -->
+                <h2>Idade</h2>
+                <input type="text" name="idade" />
+
+                <h2>Telefone</h2>
+                <input type="tel" name="tel" maxlength=12 minlength=11 />
+
+                <h2>Email</h2>
+                <input type="email" name="email"/>
+
+                <h2>Endereço</h2>
+                <input type="text" name="logr" />
+
+                <h2>Bairro</h2>
+                <input type="text" name="bairro" />
+
+                <h2>Cidade</h2>
+                <input type="text" name="cidade" />
+
+                <h2>Estado</h2>
+                <!-- https://gist.github.com/quagliato/9282728 Agradeço a ele por não ter que escrever todo esse código-->
+                <div id="estados">
+                    <select id="estado" name="estado">
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                        <option value="Estrangeiro">Estrangeiro</option>
+                    </select>
+                </div>
+                
+                <!-- Objetivo -->
+
+                <h2>Objetivo</h2>
+                <textarea  type="text" name="obj"></textarea>
+
+                <!--formação Academica  -->
+                <h2>Formação Acadêmica</h2>
+
+                <h3>Curso</h3>
+                <input type="text" name="curso" />
+                
+                <h3 >Instituição</h3>
+                <input type="text" name="inst" />
+                
+                <h3 >Ano de Conclusão</h3>
+                <select  name="opcao" >
+                    <option value="concluido">Concluido Em:</option>
+                    <option value="conclusao">Conclusão Em:</option>
+                </select>
+                <input type="date" name="data_conc">
+
+                <!-- Experienêcia -->
+                <h2>Experienêcia</h2>
+
+                <h3>Empresa</h3>
+                <input type="text" name="empresa" />
+                
+                <h3 >Cargo</h3>
+                <input type="text" name="cargo" />
+
+                <h3>Atividades Desempenhadas no Cargo</h3>
+                <textarea type="text" name="funcao" ></textarea>
+                
+                <div>
+                    <div>
+                        <h3 class="datas">Data de entrada</h3>
+                        <h3 class="datas">Data de saída</h3>  
+                    </div>
+                
+                    <input class="data_box" type="date" name="data_ent">
+                    <input class="data_box" type="date" name="data_sai">
+                    <span class="ajuda">?</span> 
+                </div>
+                   
+                <!-- Idiomas -->
+                <h2>Idiomas</h2>
+                <ul>      
+                    <input type="checkbox" name="pt">
+                    <li style="display: inline">Português</li>
+                    <input type="checkbox" name="en">
+                    <li style="display: inline">Inglês</li>
+                    <input type="checkbox" name="de">
+                    <li style="display: inline">Alemão</li>
+                    <input type="checkbox" name="es">
+                    <li style="display: inline">Espanhol</li>
+                    <input type="checkbox" name="cn">
+                    <li style="display: inline">Chinês(Mandarim)</li>
+                    <input type="checkbox" name="id">
+                    <li style="display: inline">Indonésio</li>
+                </ul>
+            </div>
+            
+            <p><input type="submit" value="Enviar" /></p>
+
+        </form>
+        
+    </body>
+
+</html>
